@@ -1,3 +1,6 @@
+# APPGENIE v1.1 - Your wish is my command
+# 2025 C/SrA Moser - THIS SCRIPT SHOULD NOT BE SOLD!
+
 read -t 20 -p "\033[31m------------------------ \033[1mWARNING!${RESET}\033[31m ------------------------${RESET}\n\nRunning this script before doing forensics questions CAN and WILL cause you to \033[4mlose evidence!${RESET}\n\nThe following applications will be INSTALLED by default - make sure there are no conflicts in the README!\n - Uncomplicated Firewall (UFW)\n\nThe following applications will be REMOVED by default - make sure there are no conflicts in the README!\n - Wireshark \n - Ophcrack \n - Transmission\n\nAre you \033[1mabsolutely sure${RESET} you want to continue? (y/n) (continues in 20 seconds) " will_to_live
 if [ ${will_to_live} == "n" ]; then
 	exit 130
@@ -30,6 +33,6 @@ sudo apt purge transmission -y
 # Remove all unneccesary dependencies
 sudo apt autoremove -y
 
-echo "Looks like my work is done here. Farewell... till meet again."
+echo "Looks like my work is done here. Remember to enable automatic updates in the update manager. Farewell... till meet again."
 
 fi
